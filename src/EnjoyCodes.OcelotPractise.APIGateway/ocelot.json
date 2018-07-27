@@ -9,11 +9,23 @@
                     "Port": 5001
                 }
             ],
-            "UpstreamPathTemplate": "/api/values",
+            "UpstreamPathTemplate": "/api1/values",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/values",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "UpstreamPathTemplate": "/api2/values",
             "UpstreamHttpMethod": [ "Get" ]
         }
     ],
     "GlobalConfiguration": {
-        "BaseUrl": "http://localhost:5000"
+        //"BaseUrl": "http://localhost:5000"
     }
 }
